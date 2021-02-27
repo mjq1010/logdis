@@ -1,0 +1,24 @@
+{include file="public/admin" selfJS='delivery' /}
+<!-- 货物配送 -->
+<div class="user-pass-main layui-card">
+    <div class="layui-card-header">货物配送</div>
+    <div class="layui-card-body" pad15="">
+        <table id="demo" lay-filter="delivery"></table>
+    </div>
+</div>
+<script type="text/html" id="toolbarDemo">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm" lay-event="delivery">送达</button>
+    </div>
+</script>
+<script type="text/html" id="statusTpl">
+    {{#  if(d.status === '派件中'){ }}
+      <span style="color: #009688;">{{ d.status }}</span>
+    {{#  } else { }}
+      <span style="color: red;">{{ d.status }}</span>
+    {{#  } }}
+</script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="delivery">送达</a>
+</script>
+{include file="public/adminEnd" /}

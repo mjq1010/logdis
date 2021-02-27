@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>登录</title>
+        <link rel="stylesheet" href="{__CSS__}/base.css" />
+        <link rel="stylesheet" href="{__CSS__}/common.css" />
+        <link rel="stylesheet" href="{__ICONFONT__}/iconfont.css" />
+        <link rel="stylesheet" href="{__CSS__}/login.css" />
+        <script src="{__JS__}/jQuery/jquery.min.js"></script>
+        <script src="{__JS__}/gverify.js"></script>
+        <script src="{__JS__}/common.js"></script>
+        <script src="{__JS__}/login.js"></script>
+    </head>
+    <body>
+        <div id="login">
+            <h1>物流配送管理系统</h1>
+            <div class="left"></div>
+            <div class="right">
+                <h2>欢迎登录</h2>
+                <form action="" method="">
+                    <div>
+                        <i class="iconfont iconxingming"></i>
+                        <input type="text" placeholder="用户名" id="name" />
+                    </div>
+                    <div><i class="iconfont iconmima"></i><input type="password" placeholder="密码" id="password" /></div>
+                    <div>
+                        <i class="iconfont iconyanzhengma"></i><input type="text" placeholder="验证码" id="captcha" />
+                        <div id="yzm" title="看不清？点击换一张"></div>
+                    </div>
+                    <p>
+                        <span>
+                            <input type="checkbox" id="autoLogin" />
+                            <label for="autoLogin">自动登录</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" id="admin" />
+                            <label for="admin">管理员</label>
+                        </span>
+                    </p>
+                    <p><input type="submit" value="立即登录" id="submit" /></p>
+                    <p>还没有账号？<a href="register">立即注册</a></p>
+                </form>
+                
+            </div>
+        </div>
+    </body>
+</html>

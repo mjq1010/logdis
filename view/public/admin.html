@@ -1,0 +1,103 @@
+<!-- 公共模板文件 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>物流配送管理系统</title>
+        <!-- 公共样式 -->
+        <link rel="stylesheet" href="{__CSS__}/base.css" />
+        <link rel="stylesheet" href="{__ICONFONT__}/iconfont.css" />
+        <link rel="stylesheet" href="{__LAYUI__}/css/layui.css" />
+        <link rel="stylesheet" href="{__CSS__}/wlMain.css" />
+        <!-- 公共js -->
+        <script src="{__JS__}/jQuery/jquery.min.js"></script>
+        <script src="{__LAYUI__}/layui.js"></script>
+        <script src="{__JS__}/common.js"></script>
+        <!-- 独立js -->
+        <script type="module" src="{__JS__}/admin/[selfJS].js"></script>
+    </head>
+    <body>
+        <div id="main" class="layui-fluid">
+            <div class="main-left">
+                <a class="logo" href="http://www.logdis.com/index.php/index">物流配送管理系统</a>
+                <div class="nav">
+                    <ul class="nav-side">
+                        <ul class="layui-nav layui-nav-tree layui-nav-side">
+                            <li class="layui-nav-item">
+                                <a href="http://www.logdis.com/index.php/index"><i class="iconfont iconzhuye"></i><span>主页</span></a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="http://www.logdis.com/index.php/index/author"><i class="iconfont iconyingyongguanliyuanguanli"></i><span>权限管理</span></a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="http://www.logdis.com/index.php/index/client"><i class="iconfont iconxingming"></i><span>客户管理</span></a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="http://www.logdis.com/index.php/index/driver"><i class="iconfont iconsijiguanli"></i><span>司机管理</span></a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="http://www.logdis.com/index.php/index/car"><i class="iconfont iconcheliangguanli"></i><span>车辆管理</span></a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;"><i class="iconfont iconpeisongguanli"></i><span>配送管理</span></a>
+                                <dl class="layui-nav-child">
+                                    <dd class="collect"><a href="http://www.logdis.com/index.php/index/collect">审核揽收</a></dd>
+                                    <dd class="delivery"><a href="http://www.logdis.com/index.php/index/delivery">货物配送</a></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a ><i class="iconfont icondingdanguanli"></i><span>运单管理</span></a>
+                                <dl class="layui-nav-child">
+                                    <dd class="waybill"><a href="http://www.logdis.com/index.php/index/waybill">生成运单</a></dd>
+                                    <dd class="updateWaybill"><a href="http://www.logdis.com/index.php/index/updateWaybill">更新运单</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-right">
+                <div class="header">
+                    <div class="header-left">
+                        <i class="layui-icon layui-icon-shrink-right toggle-side"></i>
+                        <div class="search">
+                            <input type="text" name="title" placeholder="搜索..." autocomplete="off" class="layui-input" />
+                            <button class="layui-btn"><i class="layui-icon layui-icon-search" id="searchBtn"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                        <ul class="layui-nav">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">
+                                    <i class="layui-icon layui-icon-notice" style="color: black; font-size: 20px"></i>
+                                    <span class="layui-badge-dot layui-bg-green"></span>
+                                </a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">
+                                    <i class="layui-icon layui-icon-email" style="color: black; font-size: 20px"></i>
+                                    <span class="layui-badge-dot layui-bg-green"></span>
+                                </a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;"><img src="//t.cn/RCzsdCq" class="layui-nav-img" /><span id="name"></span></a>
+                                <dl class="layui-nav-child">
+                                    <dd id="user-info">
+                                        <a href="http://www.logdis.com/index.php/index/info"><i class="layui-icon layui-icon-username"></i>&nbsp基本信息</a>
+                                    </dd>
+                                    <dd id="user-repass">
+                                        <a href="http://www.logdis.com/index.php/index/repass"><i class="layui-icon layui-icon-password"></i>&nbsp修改密码</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="layui-nav-item">
+                                <button class="layui-btn closeBtn"><i class="layui-icon layui-icon-logout"></i>&nbsp注销</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+<!-- userEnd,公共文件尾部不要格式化！-->

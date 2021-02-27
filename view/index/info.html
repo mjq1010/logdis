@@ -1,0 +1,40 @@
+{include file="public/admin" selfJS='info' /}
+<!-- 设置我的资料 -->
+<div class="user-pass-main layui-card">
+    <div class="layui-card-header">设置我的资料</div>
+    <div class="layui-card-body" pad15="">
+        <div class="layui-form" lay-filter="info">
+            <div class="layui-form-item">
+                <label class="layui-form-label">管理员名</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="admin_name" lay-verify="name" placeholder="请输入管理员名" autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">角色</label>
+                <div class="layui-input-inline" style="width: 250px">
+                    <select name="admin_role" lay-filter="author_opt" disabled>
+                        <option value="超级管理员">超级管理员</option>
+                        <option value="配送管理员">配送管理员</option>
+                        <option value="车辆管理员">车辆管理员</option>
+                        <option value="司机管理员">司机管理员</option>
+                        <option value="订单管理员">订单管理员</option>
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux">角色权限，只有超级管理员可以修改</div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">具体描述</label>
+                <div class="layui-input-inline" style="width: 250px">
+                    <textarea name="admin_describe" placeholder="请输入内容" class="layui-textarea" style="resize: none"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block" style="margin-left: 100px">
+                    <button class="layui-btn" lay-submit="" lay-filter="setmyinfo">确认修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="public/adminEnd" /}

@@ -1,0 +1,33 @@
+{include file="public/user" selfJS='lookOrder' /}
+<!-- 查看订单 -->
+<div class="user-pass-main layui-card">
+    <div class="layui-card-header">查看订单</div>
+    <div class="layui-card-body" pad15="">
+        <table id="demo" lay-filter="lookOrder"></table>
+    </div>
+</div>
+<script type="text/html" id="toolbarDemo">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm" lay-event="delete">删除</button>
+    </div>
+</script>
+<script type="text/html" id="statusTpl">
+     {{#  if(d.status === '审核中'){ }}
+      <span style="color: #E9C341;">{{ d.status }}</span>
+     {{#  } else if(d.status === '已揽收'){ }}
+      <span style="color: #5470C6;">{{ d.status }}</span>
+     {{#  } else if(d.status === '运输中'){ }}
+     <span style="color: #804000;">{{ d.status }}</span>
+     {{#  }else if(d.status === '派件中'){ }}
+     <span style="color: #4b0097;">{{ d.status }}</span>
+     {{#  }else if(d.status === '已拒接'){ }}
+     <span style="color: red;">{{ d.status }}</span>
+     {{#  }else { }}
+      <span style="color: green;">{{ d.status }}</span>
+     {{#  } }}
+</script>
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+{include file="public/userEnd" /}

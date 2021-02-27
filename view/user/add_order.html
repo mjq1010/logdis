@@ -1,0 +1,78 @@
+{include file="public/user" selfJS='addOrder' /}
+<div class="user-pass-main layui-card">
+    <div class="layui-card-header">添加订单</div>
+    <div class="layui-card-body" pad15="">
+        <div class="layui-form" lay-filter="addOrder">
+            <div class="layui-form-item">
+                <label class="layui-form-label">收件人</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="s_name" lay-verify="required" class="layui-input" autocomplete="off" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">收件人手机</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="s_phone" lay-verify="phone" class="layui-input" autocomplete="off" />
+                </div>
+            </div>
+            <div class="layui-form-item" style="display: flex">
+                <label class="layui-form-label">收件地址</label>
+                <div class="layui-input-inline">
+                    <select name="sheng" lay-filter="sheng_address" class="sheng_address" lay-verify="required"></select>
+                </div>
+            </div>
+            <div class="layui-form-item" style="display: flex">
+                <label class="layui-form-label"></label>
+                <div class="layui-input-inline">
+                    <select name="shi" lay-filter="shi_address" class="shi_address" lay-verify="required">
+                        <option value="">市/区</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item" style="display: flex">
+                <label class="layui-form-label"></label>
+                <div class="layui-input-inline">
+                    <input type="text" name="xi_address" value="" class="layui-input" placeholder="详细地址" autocomplete="off" lay-verify="required" />
+                </div>
+            </div>
+            <div class="layui-form-item" style="display: flex">
+                <label class="layui-form-label">货物类型</label>
+                <div class="layui-input-inline">
+                    <select name="type" class="" lay-verify="required">
+                        <option value="">请选择货物类型</option>
+                        <option value="文件">文件</option>
+                        <option value="数码产品">数码产品</option>
+                        <option value="日用品">日用品</option>
+                        <option value="服饰">服饰</option>
+                        <option value="食品">食品</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">货物重量</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="weight" name="weight" lay-verify="required|number|weight" class="layui-input" autocomplete="off" />
+                </div>
+                <div class="layui-form-mid layui-word-aux">单位：公斤(1Kg)&nbsp&nbsp省内1公斤/12元，超出加5元；省外1公斤/20元，超出加8元；</div>
+            </div>
+            <div class="layui-form-item" style="display: flex">
+                <label class="layui-form-label">寄件类型</label>
+                <div class="layui-input-inline">
+                    <select name="method" class="" lay-verify="required">
+                        <option value="">请选择寄件类型</option>
+                        <option value="上门寄件">上门寄件</option>
+                        <option value="代收点寄件">代收点寄件</option>
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux">*上门寄件服务费10元</div>
+            </div>
+            <div class="layui-form-item">   
+                <div class="layui-input-block" style="margin-left: 100px">
+                    <button class="layui-btn" lay-submit="" lay-filter="addOrder">确认添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="public/userEnd" /}

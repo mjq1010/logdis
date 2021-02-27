@@ -1,0 +1,24 @@
+{include file="public/admin" selfJS='update_waybill' /}
+<!-- 更新运单 -->
+<div class="user-pass-main layui-card">
+    <div class="layui-card-header">更新运单</div>
+    <div class="layui-card-body" pad15="">
+        <table id="demo" lay-filter="update_waybill"></table>
+    </div>
+</div>
+<!-- <script type="text/html" id="toolbarDemo">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm" lay-event="delivery">送达</button>
+    </div>
+</script> -->
+<script type="text/html" id="statusTpl">
+    {{#  if(d.bill_status === '运输中'){ }}
+      <span style="color: #009688;">{{ d.bill_status }}</span>
+    {{#  } else { }}
+      <span style="color: red;">{{ d.bill_status }}</span>
+    {{#  } }}
+</script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="complete">完成</a>
+</script>
+{include file="public/adminEnd" /}

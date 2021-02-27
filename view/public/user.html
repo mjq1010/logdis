@@ -1,0 +1,86 @@
+<!-- 公共模板文件 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>物流配送管理系统</title>
+        <!-- 公共样式 -->
+        <link rel="stylesheet" href="{__CSS__}/base.css" />
+        <link rel="stylesheet" href="{__ICONFONT__}/iconfont.css" />
+        <link rel="stylesheet" href="{__LAYUI__}/css/layui.css" />
+        <link rel="stylesheet" href="{__CSS__}/wlMain.css" />
+        <!-- 公共js -->
+        <script src="{__JS__}/jQuery/jquery.min.js"></script>
+        <script src="{__LAYUI__}/layui.js"></script>
+        <script src="{__JS__}/common.js"></script>
+        <!-- 独立js -->
+        <script type="module" src="{__JS__}/user/[selfJS].js"></script>
+    </head>
+    <body>
+        <div id="main" class="layui-fluid">
+            <div class="main-left">
+                <a class="logo" href="http://www.logdis.com/index.php/user">物流配送管理系统</a>
+                <div class="nav">
+                    <ul class="nav-side">
+                        <ul class="layui-nav layui-nav-tree layui-nav-side">
+                            <li class="layui-nav-item">
+                                <a href="http://www.logdis.com/index.php/user/addOrder"><i class="iconfont iconziyuan35"></i><span>添加订单</span></a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="http://www.logdis.com/index.php/user/lookOrder"><i class="iconfont icon065chakandingdan"></i><span>查看订单</span></a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="http://www.logdis.com/index.php/user/info"><i class="iconfont iconxiugaiziliao"></i><span>修改资料</span></a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="http://www.logdis.com/index.php/user/repass"><i class="iconfont iconxiugaimima"></i><span>修改密码</span></a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-right">
+                <div class="header">
+                    <div class="header-left">
+                        <i class="layui-icon layui-icon-shrink-right toggle-side"></i>
+                        <div class="search">
+                            <input type="text" name="title" placeholder="搜索..." autocomplete="off" class="layui-input" />
+                            <button class="layui-btn"><i class="layui-icon layui-icon-search" id="searchBtn"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                        <ul class="layui-nav">
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">
+                                    <i class="layui-icon layui-icon-notice" style="color: black; font-size: 20px"></i>
+                                    <span class="layui-badge-dot layui-bg-green"></span>
+                                </a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;">
+                                    <i class="layui-icon layui-icon-email" style="color: black; font-size: 20px"></i>
+                                    <span class="layui-badge-dot layui-bg-green"></span>
+                                </a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="javascript:;"><img src="//t.cn/RCzsdCq" class="layui-nav-img" /><span id="name"></span></a>
+                                <dl class="layui-nav-child">
+                                    <dd id="user-info">
+                                        <a href="http://www.logdis.com/index.php/user/info"><i class="layui-icon layui-icon-username"></i>&nbsp基本信息</a>
+                                    </dd>
+                                    <dd id="user-repass">
+                                        <a href="http://www.logdis.com/index.php/user/repass"><i class="layui-icon layui-icon-password"></i>&nbsp修改密码</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="layui-nav-item">
+                                <button class="layui-btn closeBtn"><i class="layui-icon layui-icon-logout"></i>&nbsp注销</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                <!-- userEnd,公共文件尾部不要格式化！-->

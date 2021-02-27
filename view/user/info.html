@@ -1,0 +1,48 @@
+{include file="public/user" selfJS='info' /}
+<!-- 设置我的资料 -->
+<div class="user-pass-main layui-card">
+    <div class="layui-card-header">设置我的资料</div>
+    <div class="layui-card-body" pad15="">
+        <div class="layui-form" lay-filter="info">
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="username" value="" lay-verify="required|name" class="layui-input" autocomplete="off" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">手机</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="cellphone" value="" lay-verify="phone" autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-form-item" style="display: flex">
+                <label class="layui-form-label">默认地址</label>
+                <div class="layui-input-inline" >
+                <select name="sheng" lay-filter="sheng_address" class="sheng_address" lay-verify="required">
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item" style="display: flex">
+                <label class="layui-form-label"></label>
+                <div class="layui-input-inline">
+                    <select name="shi" lay-filter="shi_address" class="shi_address" lay-verify="required">
+                        <option value="">市/区</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item" style="display: flex">
+                <label class="layui-form-label"></label>
+                <div class="layui-input-inline">
+                    <input type="text" name="xi_address" value="" class="layui-input" placeholder="详细地址" autocomplete="off" lay-verify="required" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block" style="margin-left: 100px">
+                    <button class="layui-btn" lay-submit="" lay-filter="setmyinfo">确认修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="public/userEnd" /}
